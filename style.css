@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    background: rgb(8, 29, 54);
+}
+.btnC{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 20px;
+}
+#sBtn{
+    width: 150px;
+    height: 50px;
+    background: lightgreen;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#fBtn{
+    width: 150px;
+    height: 50px;
+    background: tomato;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.box{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.toast{
+    width: 350px;
+    height: 110px;
+    background: whitesmoke;
+    border: 5px solid rgb(127, 127, 127);
+    font-size: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    transform: translateX(100%);
+    animation: left 0.5s linear forwards;
+}
+@keyframes left{
+    100%{
+        transform: translateX(0%);
+    }
+}
+.toast::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: blue;
+    animation: dec 5.5s linear forwards;
+}
+
+@keyframes dec{
+    100%{
+        width: 0px;
+    }
+}
